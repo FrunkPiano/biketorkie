@@ -1,0 +1,6 @@
+module Pods_biketorkie {
+  umbrella header "Pods-biketorkie-umbrella.h"
+
+  export *
+  module * { export * }
+}
