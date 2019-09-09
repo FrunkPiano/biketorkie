@@ -1,4 +1,4 @@
-module Pods_biketorkie {
+framework module Pods_biketorkie {
   umbrella header "Pods-biketorkie-umbrella.h"
 
   export *
