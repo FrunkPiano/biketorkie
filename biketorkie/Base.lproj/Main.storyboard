@@ -289,9 +289,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="LDq-f7-jk4" kind="popoverPresentation" popoverAnchorView="KQY-Hp-Wlk" id="Y4h-eS-5ny">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="LDq-f7-jk4" kind="modal" id="Y4h-eS-5ny"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -450,7 +448,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginClick:" destination="LDq-f7-jk4" eventType="touchUpInside" id="Zzn-Dv-1GB"/>
-                                    <segue destination="G2X-mW-h9h" kind="presentation" identifier="loginSegue" id="puf-vR-Msa"/>
+                                    <segue destination="G2X-mW-h9h" kind="modal" identifier="loginSegue" id="puf-vR-Msa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -802,69 +800,16 @@
                     <view key="view" contentMode="scaleToFill" id="bFe-ix-nf7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QQ20190823-210824" translatesAutoresizingMaskIntoConstraints="NO" id="vzs-IS-YXq">
-                                <rect key="frame" x="28" y="76" width="74" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Harry Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTs-hi-5y2">
-                                <rect key="frame" x="123" y="76" width="99" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MapRedAndGrey" translatesAutoresizingMaskIntoConstraints="NO" id="ykD-cY-8h9">
-                                <rect key="frame" x="123" y="105" width="27" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaP-Fg-5On">
-                                <rect key="frame" x="342" y="76" width="45" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New to Brissie!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGR-9J-qol">
-                                <rect key="frame" x="28" y="169" width="350" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdk-zk-IuJ">
-                                <rect key="frame" x="28" y="224" width="366" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit Profile">
-                                    <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="EditProfile:" destination="O8c-uK-7I5" eventType="touchUpInside" id="woz-Ou-rPv"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intermediate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5E4-Lq-oHm">
-                                <rect key="frame" x="167" y="116" width="72" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ZCq-vB-cgv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="1Zt-dz-tna">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="kWZ-CE-ZJB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="kWZ-CE-ZJB">
                             <connections>
                                 <action selector="Settings:" destination="O8c-uK-7I5" id="HQt-Bl-yhV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="avatar" destination="vzs-IS-YXq" id="3xI-vQ-9PL"/>
-                        <outlet property="bikeType" destination="ykD-cY-8h9" id="beu-MD-zGh"/>
-                        <outlet property="introdution" destination="bGR-9J-qol" id="dtS-hN-LPe"/>
-                        <outlet property="medal" destination="eaP-Fg-5On" id="GoH-pV-Dzl"/>
-                        <outlet property="typeLabel" destination="5E4-Lq-oHm" id="iss-0c-70P"/>
-                        <outlet property="userName" destination="oTs-hi-5y2" id="Wcf-ep-3Ak"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbV-5p-eRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -905,6 +850,6 @@
         <image name="QQ20190823-224645" width="402" height="43"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tyL-ug-v6S"/>
+        <segue reference="puf-vR-Msa"/>
     </inferredMetricsTieBreakers>
 </document>

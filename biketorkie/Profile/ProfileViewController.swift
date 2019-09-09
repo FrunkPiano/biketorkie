@@ -11,39 +11,44 @@ import SnapKit
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var tableView: UITableView!
-    @IBOutlet weak var avatar: UIImageView!
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var bikeType: UIImageView!
-    @IBOutlet weak var typeLabel: UILabel!
-    @IBOutlet weak var medal: UIImageView!
-    @IBOutlet weak var introdution: UILabel!
-    
+    var dynamics = [Dynamic(), Dynamic(), Dynamic()]
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
         tableView = UITableView.init(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 100), style: .grouped)
+        tableView.backgroundColor = UIColor.white
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(introdution).offset(200)
-            make.left.right.bottom.equalToSuperview()
+            make.edges.equalToSuperview()
         }
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
         
+//        guard let view = Bundle.main.loadNibNamed("ProfileHeaderView", owner: self, options: nil)?.first as? ProfileHeaderView else {
+//            return
+//        }
+//        tableView.tableHeaderView = view
     }
     
-    @IBAction func EditProfile(_ sender: Any) {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let view = Bundle.main.loadNibNamed("ProfileHeaderView", owner: self, options: nil)?.first as? ProfileHeaderView else {
+            return UIView()
+        }
+        return view
     }
     
-    @IBAction func Settings(_ sender: Any) {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 200
     }
     
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return dynamics.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,11 +56,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         guard  let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell else {
             return UITableViewCell()
         }
+        cell.dynamic = dynamics[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+    
     
 }
