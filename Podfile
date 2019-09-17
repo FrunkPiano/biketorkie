@@ -4,4 +4,7 @@ use_frameworks!
 target 'biketorkie' do
 pod 'SQLite.swift', '~> 0.12.0'
 pod 'SnapKit', '~> 5.0.0'
+pod 'Moya'
+pod 'Kingfisher'
+pod 'MBProgressHUD'
 end

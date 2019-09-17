@@ -9,7 +9,7 @@
 import UIKit
 class RegisterViewController2: UIViewController {
     
-    
+    var appuser: AppUser!
     
     @IBOutlet weak var genderField: UITextField!
     @IBOutlet weak var birthdayField: UITextField!
@@ -17,7 +17,7 @@ class RegisterViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(SignUpShare.shared )
+//        print(SignUpShare.shared )
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
