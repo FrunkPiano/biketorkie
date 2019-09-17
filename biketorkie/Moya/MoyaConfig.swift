@@ -18,11 +18,11 @@ enum HttpCode : Int {
  **/
 struct BaseModel: Decodable {
     var status: Int
-    var data: Content
+    var data: String
     var msg: String
-    struct Content: Decodable {
-        var message: String
-    }
+//    struct Content: Decodable {
+//        var message: String
+//    }
 }
 
 //下面的错误码及错误信息用来在HttpRequest中使用

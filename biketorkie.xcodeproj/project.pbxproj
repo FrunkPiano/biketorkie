@@ -38,6 +38,7 @@
 		FFE1A912232F86D100258B33 /* DMAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A90B232F86D000258B33 /* DMAPI.swift */; };
 		FFE1A913232F86D100258B33 /* DMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A90C232F86D000258B33 /* DMModel.swift */; };
 		FFE1A914232F86D100258B33 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A90D232F86D000258B33 /* MoyaConfig.swift */; };
+		FFE1A91623307CC000258B33 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A91523307CC000258B33 /* NetworkTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		FFE1A90B232F86D000258B33 /* DMAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAPI.swift; sourceTree = "<group>"; };
 		FFE1A90C232F86D000258B33 /* DMModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMModel.swift; sourceTree = "<group>"; };
 		FFE1A90D232F86D000258B33 /* MoyaConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
+		FFE1A91523307CC000258B33 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		1890AC49230C1EB90033BC2B /* common */ = {
 			isa = PBXGroup;
 			children = (
+				FFE1A91523307CC000258B33 /* NetworkTools.swift */,
 				1890AC4A230C1EE30033BC2B /* SignUpShareObj.swift */,
 				FFD9DF4F2326064F00B3A5DA /* CommanVariable.swift */,
 			);
@@ -475,6 +478,7 @@
 				FFE1A912232F86D100258B33 /* DMAPI.swift in Sources */,
 				FFD9DF502326064F00B3A5DA /* CommanVariable.swift in Sources */,
 				FFE1A902232F705F00258B33 /* AppUser.swift in Sources */,
+				FFE1A91623307CC000258B33 /* NetworkTools.swift in Sources */,
 				18AA162B230AD4860098CFF9 /* UserViewController.swift in Sources */,
 				FFE1A913232F86D100258B33 /* DMModel.swift in Sources */,
 				1890AC4B230C1EE30033BC2B /* SignUpShareObj.swift in Sources */,

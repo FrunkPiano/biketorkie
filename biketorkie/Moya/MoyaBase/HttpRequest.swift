@@ -38,33 +38,33 @@ public class HttpRequest {
             case let .success(response):
                 // ***********  这里可以统一处理状态码 ****
                 //从json中解析出status_code状态码和message，用于后面的处理
-                guard let model = try? JSONDecoder().decode(BaseModel.self, from: response.data) else {
+//                guard let model = try? JSONDecoder().decode(BaseModel.self, from: response.data) else {
                     //解析出错后，直接返回data
-                    if response.statusCode == 200 {
+//                    if response.statusCode == 200 {
                         success(response.data)
-                    } else {
-                         failure?(response.statusCode, "\(response.statusCode)")
-                    }
-                    return
-                }
+//                    } else {
+//                         failure?(response.statusCode, "\(response.statusCode)")
+//                    }
+//                    return
+//                }
                 
                 //状态码：后台会规定数据正确的状态码，未登录的状态码等，可以统一处理。
-                switch (model.generalCode) {
-                case HttpCode.success.rawValue :
+//                switch (model.generalCode) {
+//                case HttpCode.success.rawValue :
                     //数据返回正确
-                    if needCache {
+//                    if needCache {
                         //缓存
-                        SaveFiles.save(path: target.path, data: response.data)
-                    }
-                    success(response.data)
-                case HttpCode.needLogin.rawValue:
+//                        SaveFiles.save(path: target.path, data: response.data)
+//                    }
+//                    success(response.data)
+//                case HttpCode.needLogin.rawValue:
                     //请重新登录
-                    failure?(model.generalCode ,model.generalMessage)
-                    alertLogin(model.generalMessage)
-                default:
+//                    failure?(model.generalCode ,model.generalMessage)
+//                    alertLogin(model.generalMessage)
+//                default:
                     //其他错误
-                    failureHandle(failure: failure, stateCode: model.generalCode, message: model.generalMessage)
-                }
+//                    failureHandle(failure: failure, stateCode: model.generalCode, message: model.generalMessage)
+//                }
             // ********************
             case let .failure(error):
                 let statusCode = error.response?.statusCode ?? 0

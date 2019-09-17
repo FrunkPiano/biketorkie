@@ -17,7 +17,7 @@ extension DMAPI: TargetType {
         case .register:
             return "register.do"
         case .login:
-            return "login.do"
+            return "loginbypwd.do?phone=1111&password=123456"
         }
     }
 
@@ -38,6 +38,8 @@ extension DMAPI: TargetType {
         case .register(let appUser):
             params = ["UserBean": appUser]
         case .login(let phone, let password):
+//            params["phone"] = phone
+//            params["password"] = password
             return .requestPlain
 //        case .rankList:
 //            return .requestPlain
@@ -47,8 +49,11 @@ extension DMAPI: TargetType {
             //不需要传参数的接口走这里
             return .requestPlain
         }
-
-        return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+//        let str: String = "{\"phone\":\"1111\",\"password\":\"123456\",\"username\":\"millow\",\"sex\":1,\"age\":8}"
+//        let data = str.data(using: String.Encoding.utf8)!
+//        return .requestData(data)
+//        return .requestJSONEncodable()
+        return .requestParameters(parameters: params, encoding: URLEncoding.default)
     }
     
     public var headers: [String: String]? {
