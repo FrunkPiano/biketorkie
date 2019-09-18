@@ -12,21 +12,16 @@ import SQLite
 class UserViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.isNavigationBarHidden = true
-        // Do any additional setup after loading the view.
     }
     
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
 //        self.navigationController?.setNavigationBarHidden(true, animated: true)
 //    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     @IBAction func loginClick(_ sender: Any) {
         print("login")
         HttpRequest.loadData(target: DMAPI.login(account: "11111", password: "123456"), success: { (data) in
@@ -48,6 +43,7 @@ class UserViewController: UIViewController {
     @IBAction func forgetPasswd(_ sender: Any) {
         print("forgetPasswd")
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let userEmail = username.text;
         let userPassword = password.text;

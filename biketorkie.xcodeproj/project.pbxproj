@@ -13,7 +13,7 @@
 		1890AC4F230C2CBA0033BC2B /* RegisterViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890AC4E230C2CBA0033BC2B /* RegisterViewController3.swift */; };
 		1890AC51230C2D6F0033BC2B /* RegisterViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890AC50230C2D6F0033BC2B /* RegisterViewController4.swift */; };
 		18AA15FA230ACD530098CFF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA15F9230ACD530098CFF9 /* AppDelegate.swift */; };
-		18AA15FC230ACD530098CFF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA15FB230ACD530098CFF9 /* ViewController.swift */; };
+		18AA15FC230ACD530098CFF9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA15FB230ACD530098CFF9 /* FirstViewController.swift */; };
 		18AA15FF230ACD540098CFF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AA15FD230ACD540098CFF9 /* Main.storyboard */; };
 		18AA1602230ACD540098CFF9 /* biketorkie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18AA1600230ACD540098CFF9 /* biketorkie.xcdatamodeld */; };
 		18AA1604230ACD5D0098CFF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AA1603230ACD5D0098CFF9 /* Assets.xcassets */; };
@@ -39,6 +39,9 @@
 		FFE1A913232F86D100258B33 /* DMModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A90C232F86D000258B33 /* DMModel.swift */; };
 		FFE1A914232F86D100258B33 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A90D232F86D000258B33 /* MoyaConfig.swift */; };
 		FFE1A91623307CC000258B33 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A91523307CC000258B33 /* NetworkTools.swift */; };
+		FFE1A9192330DA9600258B33 /* RideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A9182330DA9600258B33 /* RideViewController.swift */; };
+		FFE1A91C2332189300258B33 /* DynamicMaskSegmentSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A91B2332189300258B33 /* DynamicMaskSegmentSwitch.swift */; };
+		FFE1A91E23321A3400258B33 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A91D23321A3400258B33 /* EventsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +69,7 @@
 		1890AC50230C2D6F0033BC2B /* RegisterViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController4.swift; sourceTree = "<group>"; };
 		18AA15F6230ACD530098CFF9 /* biketorkie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = biketorkie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AA15F9230ACD530098CFF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18AA15FB230ACD530098CFF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18AA15FB230ACD530098CFF9 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		18AA15FE230ACD540098CFF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18AA1601230ACD540098CFF9 /* biketorkie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = biketorkie.xcdatamodel; sourceTree = "<group>"; };
 		18AA1603230ACD5D0098CFF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +102,9 @@
 		FFE1A90C232F86D000258B33 /* DMModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMModel.swift; sourceTree = "<group>"; };
 		FFE1A90D232F86D000258B33 /* MoyaConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
 		FFE1A91523307CC000258B33 /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		FFE1A9182330DA9600258B33 /* RideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideViewController.swift; sourceTree = "<group>"; };
+		FFE1A91B2332189300258B33 /* DynamicMaskSegmentSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicMaskSegmentSwitch.swift; sourceTree = "<group>"; };
+		FFE1A91D23321A3400258B33 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,8 @@
 		18AA15F8230ACD530098CFF9 /* biketorkie */ = {
 			isa = PBXGroup;
 			children = (
+				FFE1A91A2332187B00258B33 /* Events */,
+				FFE1A9172330DA7C00258B33 /* Ride */,
 				FFE1A903232F86D000258B33 /* Moya */,
 				FFE1A900232F6E6200258B33 /* Models */,
 				FFD667972325ECCB00345A02 /* Profile */,
@@ -181,7 +189,7 @@
 				1890AC49230C1EB90033BC2B /* common */,
 				1890AC46230C1D620033BC2B /* user */,
 				18AA15F9230ACD530098CFF9 /* AppDelegate.swift */,
-				18AA15FB230ACD530098CFF9 /* ViewController.swift */,
+				18AA15FB230ACD530098CFF9 /* FirstViewController.swift */,
 				18AA15FD230ACD540098CFF9 /* Main.storyboard */,
 				18AA1603230ACD5D0098CFF9 /* Assets.xcassets */,
 				18AA1605230ACD5D0098CFF9 /* LaunchScreen.storyboard */,
@@ -291,6 +299,23 @@
 				FFE1A90C232F86D000258B33 /* DMModel.swift */,
 			);
 			path = MoyaAPI;
+			sourceTree = "<group>";
+		};
+		FFE1A9172330DA7C00258B33 /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				FFE1A9182330DA9600258B33 /* RideViewController.swift */,
+			);
+			path = Ride;
+			sourceTree = "<group>";
+		};
+		FFE1A91A2332187B00258B33 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				FFE1A91B2332189300258B33 /* DynamicMaskSegmentSwitch.swift */,
+				FFE1A91D23321A3400258B33 /* EventsViewController.swift */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,7 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18AA15FC230ACD530098CFF9 /* ViewController.swift in Sources */,
+				18AA15FC230ACD530098CFF9 /* FirstViewController.swift in Sources */,
 				1890AC48230C1DB00033BC2B /* RegisterViewController1.swift in Sources */,
 				1890AC4D230C228D0033BC2B /* RegisterViewController2.swift in Sources */,
 				FFE1A910232F86D100258B33 /* HUD.swift in Sources */,
@@ -478,6 +503,7 @@
 				FFE1A912232F86D100258B33 /* DMAPI.swift in Sources */,
 				FFD9DF502326064F00B3A5DA /* CommanVariable.swift in Sources */,
 				FFE1A902232F705F00258B33 /* AppUser.swift in Sources */,
+				FFE1A91E23321A3400258B33 /* EventsViewController.swift in Sources */,
 				FFE1A91623307CC000258B33 /* NetworkTools.swift in Sources */,
 				18AA162B230AD4860098CFF9 /* UserViewController.swift in Sources */,
 				FFE1A913232F86D100258B33 /* DMModel.swift in Sources */,
@@ -486,6 +512,7 @@
 				18AA1602230ACD540098CFF9 /* biketorkie.xcdatamodeld in Sources */,
 				FFD667962325E70C00345A02 /* ProfileViewController.swift in Sources */,
 				18AA15FA230ACD530098CFF9 /* AppDelegate.swift in Sources */,
+				FFE1A9192330DA9600258B33 /* RideViewController.swift in Sources */,
 				FFE1A90F232F86D100258B33 /* StrInt.swift in Sources */,
 				1890AC51230C2D6F0033BC2B /* RegisterViewController4.swift in Sources */,
 				FFD9DF4D2325FF4500B3A5DA /* ProfileTableViewCell.swift in Sources */,
@@ -494,6 +521,7 @@
 				1890AC4F230C2CBA0033BC2B /* RegisterViewController3.swift in Sources */,
 				FFE1A90E232F86D100258B33 /* HttpRequest.swift in Sources */,
 				18DCD0A323101EF600734C6D /* RideTableViewController.swift in Sources */,
+				FFE1A91C2332189300258B33 /* DynamicMaskSegmentSwitch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
