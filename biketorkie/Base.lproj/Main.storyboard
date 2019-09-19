@@ -9,59 +9,54 @@
     </dependencies>
     <scenes>
         <!--Events-->
+        <scene sceneID="bG6-my-JKq">
+            <objects>
+                <navigationController id="Dyx-dg-ARQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Events" selectedImage="EventsRedAndGrey" id="o3J-bB-pTW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Vz-c6-j9h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YzQ-Bi-1bx" kind="relationship" relationship="rootViewController" id="hTG-kT-kBV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84q-qh-PNW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="323"/>
+        </scene>
+        <!--Events-->
         <scene sceneID="bA7-6Q-Zo7">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BwY-Y9-Gdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Events" id="YzQ-Bi-1bx" customClass="EventsViewController" customModule="biketorkie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4DV-Mx-kfn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Qz5-AB-cVh">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Qz5-AB-cVh">
+                                <rect key="frame" x="0.0" y="108" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="KcJ-hx-lpR"/>
                                 </constraints>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8i-9u-u7W" customClass="DynamicMaskSegmentSwitch" customModule="biketorkie" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="132" width="414" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="lTO-q6-3Fc"/>
-                                </constraints>
-                            </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y7D-cl-mtc">
-                                <rect key="frame" x="0.0" y="245" width="414" height="568"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="K5d-cT-JzU"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="vHj-pd-s6h"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="g8i-9u-u7W" firstAttribute="top" secondItem="Qz5-AB-cVh" secondAttribute="bottom" id="4o4-sc-TpQ"/>
-                            <constraint firstItem="Qz5-AB-cVh" firstAttribute="top" secondItem="EO0-WI-JmR" secondAttribute="top" id="KZ0-xx-AJc"/>
-                            <constraint firstItem="g8i-9u-u7W" firstAttribute="leading" secondItem="EO0-WI-JmR" secondAttribute="leading" id="Li2-Kg-5LZ"/>
+                            <constraint firstItem="Qz5-AB-cVh" firstAttribute="top" secondItem="EO0-WI-JmR" secondAttribute="top" constant="20" id="LUv-y6-KmB"/>
                             <constraint firstItem="Qz5-AB-cVh" firstAttribute="leading" secondItem="EO0-WI-JmR" secondAttribute="leading" id="PNX-ub-PoU"/>
-                            <constraint firstItem="Y7D-cl-mtc" firstAttribute="leading" secondItem="EO0-WI-JmR" secondAttribute="leading" id="WFv-V3-u5V"/>
                             <constraint firstItem="Qz5-AB-cVh" firstAttribute="trailing" secondItem="EO0-WI-JmR" secondAttribute="trailing" id="jZa-wB-fi4"/>
-                            <constraint firstItem="EO0-WI-JmR" firstAttribute="bottom" secondItem="Y7D-cl-mtc" secondAttribute="bottom" id="kcp-L3-5uA"/>
-                            <constraint firstItem="Y7D-cl-mtc" firstAttribute="top" secondItem="g8i-9u-u7W" secondAttribute="bottom" id="lda-GY-fjJ"/>
-                            <constraint firstItem="EO0-WI-JmR" firstAttribute="trailing" secondItem="g8i-9u-u7W" secondAttribute="trailing" id="qbc-2E-LGT"/>
-                            <constraint firstItem="EO0-WI-JmR" firstAttribute="trailing" secondItem="Y7D-cl-mtc" secondAttribute="trailing" id="yuc-f5-DhO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EO0-WI-JmR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" image="EventsRedAndGrey" largeContentSizeImage="EventsRedAndGrey" id="gp9-Lr-MQQ"/>
+                    <navigationItem key="navigationItem" title="Events" id="HpJ-D6-e6t"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="scrollView" destination="Y7D-cl-mtc" id="qtE-cz-dQX"/>
-                        <outlet property="switcher" destination="g8i-9u-u7W" id="K6B-9p-XpG"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BwY-Y9-Gdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="679.71014492753625" y="329.46428571428572"/>
+            <point key="canvasLocation" x="797" y="281"/>
         </scene>
         <!--Ride-->
         <scene sceneID="Ezn-D0-sct">
@@ -418,9 +413,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="KR7-LW-x5C" kind="relationship" relationship="viewControllers" id="uTy-6v-4je"/>
-                        <segue destination="YzQ-Bi-1bx" kind="relationship" relationship="viewControllers" id="4AH-Cc-0jL"/>
                         <segue destination="Sl9-8y-pSi" kind="relationship" relationship="viewControllers" id="HIr-K7-dTS"/>
                         <segue destination="bRa-Sd-ELX" kind="relationship" relationship="viewControllers" id="7Hz-mW-0EA"/>
+                        <segue destination="Dyx-dg-ARQ" kind="relationship" relationship="viewControllers" id="Ktq-d1-xRD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAU-0w-f9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -768,6 +763,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gmh-u8-s1V"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXe-lb-A8T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -7,29 +7,44 @@
 //
 
 import UIKit
-
+let NavH:CGFloat = UIScreen.main.bounds.height == 812 ? 84 : 64
 class EventsViewController: UIViewController {
 
-    @IBOutlet weak var switcher: DynamicMaskSegmentSwitch!
+    private var pageCollectionView :YCPageCollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 标题
+        let titles = ["Discovery", "Hosting", "Plan"]
         
+        //样式
+        let style = YCTitleStyle()
+        //可以滚动
+        style.isScrollEnable = false
+        //显示底部滚动条
+        style.isShowBottomLine = true
+        //进行缩放
+        style.isNeedScale = true
+        //显示遮盖
+        style.isShowCover = true
         
-        let configure = DynamicMaskSegmentSwitchConfigure(highlightedColor: UIColor.orange, normalColor: UIColor.white, items: ["首页","消息","发现","个人"])
+        // 子控制器
+        let childVcs = [DiscoveryViewController(), HostingViewController(), PlanViewController()]
+//        for _ in 0..<titles.count {
+//            let vc = UIViewController()
+//            vc.view.backgroundColor = UIColor.randomColor()
+//            childVcs.append(vc)
+//        }
         
-        switcher.configure = configure
-
+        // pageView的frame
+        let pageFrame = CGRect(x: 0, y: IphoneConstant.heightNavigateBar + 64, width: view.bounds.width, height: view.bounds.height - IphoneConstant.heightNavigateBar - 64)
+        
+        // 创建YCPageView,并且添加到控制器的view中
+        let pageView = YCPageView(frame: pageFrame, titles: titles, childVcs: childVcs, parentVc: self, style : style)
+        view.addSubview(pageView)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+
