@@ -12,8 +12,10 @@ class RideViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.barTintColor = UIColor.mainRed()
+        
+        let attributeDict = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22)]
+        self.navigationController?.navigationBar.titleTextAttributes = attributeDict
     }
     
 

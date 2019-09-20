@@ -13,6 +13,10 @@ class EventsViewController: UIViewController {
     private var pageCollectionView :YCPageCollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = UIColor.mainRed()
+        
+        let attributeDict = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22)]
+        self.navigationController?.navigationBar.titleTextAttributes = attributeDict
         // 标题
         let titles = ["Discovery", "Hosting", "Plan"]
         

@@ -94,4 +94,12 @@ extension UIColor {
         
         return (cmps[0] * 255, cmps[1] * 255, cmps[2] * 255)
     }
+    
+    class func mainRed() -> UIColor {
+        return UIColor.init(hex: "#E64D4D") ?? UIColor.white
+    }
+    
+    class func secRed() -> UIColor {
+        return UIColor.init(hex: "#FE525B") ?? UIColor.white
+    }
 }

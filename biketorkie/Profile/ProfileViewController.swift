@@ -14,6 +14,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     var dynamics = [Dynamic(), Dynamic(), Dynamic()]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.mainRed()
+        
+        let attributeDict = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22)]
+        self.navigationController?.navigationBar.titleTextAttributes = attributeDict
+        
         self.view.backgroundColor = UIColor.white
         tableView = UITableView.init(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 100), style: .grouped)
         tableView.backgroundColor = UIColor.white

@@ -65,6 +65,9 @@
 		FFE1A95823336A7400258B33 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A95723336A7400258B33 /* Const.swift */; };
 		FFE1A95B233370B800258B33 /* IphoneConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A95A233370B800258B33 /* IphoneConstant.swift */; };
 		FFE1A95D233370FB00258B33 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A95C233370FB00258B33 /* UIScreen+Extension.swift */; };
+		FFE1A96023337C4200258B33 /* NewsFeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A95F23337C4200258B33 /* NewsFeedsViewController.swift */; };
+		FFE1A96323338A9000258B33 /* HighlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A96123338A9000258B33 /* HighlightCollectionViewCell.swift */; };
+		FFE1A96423338A9000258B33 /* HighlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE1A96223338A9000258B33 /* HighlightCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +155,9 @@
 		FFE1A95923336B3A00258B33 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		FFE1A95A233370B800258B33 /* IphoneConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IphoneConstant.swift; sourceTree = "<group>"; };
 		FFE1A95C233370FB00258B33 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
+		FFE1A95F23337C4200258B33 /* NewsFeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedsViewController.swift; sourceTree = "<group>"; };
+		FFE1A96123338A9000258B33 /* HighlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFE1A96223338A9000258B33 /* HighlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighlightCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +234,7 @@
 		18AA15F8230ACD530098CFF9 /* biketorkie */ = {
 			isa = PBXGroup;
 			children = (
+				FFE1A95E23337C2300258B33 /* NewsFeeds */,
 				FFE1A94B2333673E00258B33 /* Utils */,
 				FFE1A91A2332187B00258B33 /* Events */,
 				FFE1A9172330DA7C00258B33 /* Ride */,
@@ -405,6 +412,16 @@
 			path = TBCalendar;
 			sourceTree = "<group>";
 		};
+		FFE1A95E23337C2300258B33 /* NewsFeeds */ = {
+			isa = PBXGroup;
+			children = (
+				FFE1A95F23337C4200258B33 /* NewsFeedsViewController.swift */,
+				FFE1A96123338A9000258B33 /* HighlightCollectionViewCell.swift */,
+				FFE1A96223338A9000258B33 /* HighlightCollectionViewCell.xib */,
+			);
+			path = NewsFeeds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -516,6 +533,7 @@
 				FFD9DF4E2325FF4500B3A5DA /* ProfileTableViewCell.xib in Resources */,
 				18AA1604230ACD5D0098CFF9 /* Assets.xcassets in Resources */,
 				FFE1A93C233321A400258B33 /* DsicoveryViewController.xib in Resources */,
+				FFE1A96423338A9000258B33 /* HighlightCollectionViewCell.xib in Resources */,
 				FFE1A94423332C2900258B33 /* PlanViewController.xib in Resources */,
 				18AA15FF230ACD540098CFF9 /* Main.storyboard in Resources */,
 				FFD9DF5423260A6000B3A5DA /* ProfileHeaderView.xib in Resources */,
@@ -597,6 +615,7 @@
 				FFE1A94723332EA300258B33 /* JoinActivityTableViewCell.swift in Sources */,
 				FFE1A912232F86D100258B33 /* DMAPI.swift in Sources */,
 				FFE1A93123323BFF00258B33 /* YCPageCollectionViewLayout.swift in Sources */,
+				FFE1A96023337C4200258B33 /* NewsFeedsViewController.swift in Sources */,
 				FFD9DF502326064F00B3A5DA /* CommanVariable.swift in Sources */,
 				FFE1A95623336A1400258B33 /* Foundation+Extension.swift in Sources */,
 				FFE1A902232F705F00258B33 /* AppUser.swift in Sources */,
@@ -618,6 +637,7 @@
 				1890AC51230C2D6F0033BC2B /* RegisterViewController4.swift in Sources */,
 				FFE1A95B233370B800258B33 /* IphoneConstant.swift in Sources */,
 				FFD9DF4D2325FF4500B3A5DA /* ProfileTableViewCell.swift in Sources */,
+				FFE1A96323338A9000258B33 /* HighlightCollectionViewCell.swift in Sources */,
 				FFD9DF5223260A4700B3A5DA /* ProfileHeaderView.swift in Sources */,
 				FFE1A911232F86D100258B33 /* SaveFiles.swift in Sources */,
 				1890AC4F230C2CBA0033BC2B /* RegisterViewController3.swift in Sources */,
