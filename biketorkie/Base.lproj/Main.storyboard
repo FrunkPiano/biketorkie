@@ -84,7 +84,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Photos,People,Place" translatesAutoresizingMaskIntoConstraints="NO" id="1LX-5n-XYr">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search Routes" translatesAutoresizingMaskIntoConstraints="NO" id="1LX-5n-XYr">
                                 <rect key="frame" x="0.0" y="66" width="414" height="56"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -215,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbO-Qg-aPk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="-1404"/>
+            <point key="canvasLocation" x="1359" y="-1441"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="h3h-XW-Q1O">

@@ -19,12 +19,29 @@ class RideViewController: UIViewController, MKMapViewDelegate {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = UIColor.mainRed()
+        
+        let attributeDict = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22)]
+        self.navigationController?.navigationBar.titleTextAttributes = attributeDict
+        
+        searchBar.delegate = self
+        let tapGest = UITapGestureRecognizer()
+        tapGest.numberOfTouchesRequired = 1
+        tapGest.numberOfTapsRequired = 1
+        tapGest.addTarget(self, action: #selector(closeKeyboard))
+        self.view.addGestureRecognizer(tapGest)
+        
         manager = CLLocationManager()
         manager?.desiredAccuracy = kCLLocationAccuracyBest
         manager?.activityType = .fitness
         checkLocationAuthStatus()
+        
+        manager?.startUpdatingLocation()
     }
     
+    @objc func closeKeyboard() {
+        searchBar.resignFirstResponder()
+    }
     override func viewWillAppear(_ animated: Bool) {
         manager?.delegate = self
         mapView.delegate = self
@@ -33,10 +50,6 @@ class RideViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         centerMapOnUserLocation()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
     }
         
         
@@ -75,7 +88,7 @@ class RideViewController: UIViewController, MKMapViewDelegate {
         btn.isSelected = !btn.isSelected
         if btn.isSelected {// 开始
             updatingLocation = true
-            manager?.startUpdatingLocation()
+            
         }else {// 停止
             updatingLocation = false
             manager?.stopUpdatingLocation()
@@ -94,6 +107,27 @@ class RideViewController: UIViewController, MKMapViewDelegate {
                 checkLocationAuthStatus()
                 mapView.showsUserLocation = true
             }
+        }
+        
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//            let location = locations.last
+            if let location = locations.last {
+//                let coordinate = location.coordinate
+                
+                let der = CLGeocoder()
+                der.reverseGeocodeLocation(location) { (placemarks, error) in
+                    if let plk = placemarks?[0],
+                        let locality = plk.locality,
+                        let fare = plk.thoroughfare,
+                        let name = plk.name {
+                        self.currentLocation.text = "\(locality),\(fare)\(name)"
+                    }
+                }
+            }
+                
+                
+            
+            
         }
         
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -117,7 +151,12 @@ class RideViewController: UIViewController, MKMapViewDelegate {
         }
     }
 
-
+extension RideViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchResultVC = UIViewController()
+        self.navigationController?.pushViewController(searchResultVC, animated: true)
+    }
+}
 
     class Artwork: NSObject, MKAnnotation {
         let title: String?

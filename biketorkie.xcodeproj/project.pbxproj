@@ -23,6 +23,7 @@
 		18AA162B230AD4860098CFF9 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA162A230AD4860098CFF9 /* UserViewController.swift */; };
 		18DCD0A323101EF600734C6D /* RideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DCD0A223101EF600734C6D /* RideTableViewController.swift */; };
 		3997EB86BFFED32D2D36FABC /* Pods_biketorkie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E48DCB97990F5C709A5F838 /* Pods_biketorkie.framework */; };
+		FF35B397233B5A7A009A2BFC /* CSToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35B396233B5A7A009A2BFC /* CSToast.swift */; };
 		FFD667962325E70C00345A02 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD667952325E70C00345A02 /* ProfileViewController.swift */; };
 		FFD9DF4D2325FF4500B3A5DA /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD9DF4B2325FF4500B3A5DA /* ProfileTableViewCell.swift */; };
 		FFD9DF4E2325FF4500B3A5DA /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFD9DF4C2325FF4500B3A5DA /* ProfileTableViewCell.xib */; };
@@ -112,6 +113,7 @@
 		28724221330FEE9D71E65147 /* Pods-biketorkie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biketorkie.release.xcconfig"; path = "Target Support Files/Pods-biketorkie/Pods-biketorkie.release.xcconfig"; sourceTree = "<group>"; };
 		7E48DCB97990F5C709A5F838 /* Pods_biketorkie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_biketorkie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9518FE382DFB718EC8A062 /* Pods-biketorkie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biketorkie.debug.xcconfig"; path = "Target Support Files/Pods-biketorkie/Pods-biketorkie.debug.xcconfig"; sourceTree = "<group>"; };
+		FF35B396233B5A7A009A2BFC /* CSToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSToast.swift; sourceTree = "<group>"; };
 		FFD667952325E70C00345A02 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FFD9DF4B2325FF4500B3A5DA /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		FFD9DF4C2325FF4500B3A5DA /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		1890AC49230C1EB90033BC2B /* common */ = {
 			isa = PBXGroup;
 			children = (
+				FF35B396233B5A7A009A2BFC /* CSToast.swift */,
 				FFE1A93723323CC800258B33 /* UIColor-Extension.swift */,
 				FFE1A91523307CC000258B33 /* NetworkTools.swift */,
 				1890AC4A230C1EE30033BC2B /* SignUpShareObj.swift */,
@@ -639,6 +642,7 @@
 				FFD9DF4D2325FF4500B3A5DA /* ProfileTableViewCell.swift in Sources */,
 				FFE1A96323338A9000258B33 /* HighlightCollectionViewCell.swift in Sources */,
 				FFD9DF5223260A4700B3A5DA /* ProfileHeaderView.swift in Sources */,
+				FF35B397233B5A7A009A2BFC /* CSToast.swift in Sources */,
 				FFE1A911232F86D100258B33 /* SaveFiles.swift in Sources */,
 				1890AC4F230C2CBA0033BC2B /* RegisterViewController3.swift in Sources */,
 				FFE1A90E232F86D100258B33 /* HttpRequest.swift in Sources */,

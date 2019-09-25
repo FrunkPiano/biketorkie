@@ -110,7 +110,7 @@ class TBCalendarAppearStyle: NSObject {
         self.headerViewDateHeight = 70;
         self.headerViewLineHeight = 1.0;
         self.headerViewWeekHeight = 20;
-        self.weekDateDays = ["S","M","T","W","T","F","S"]
+        self.weekDateDays = ["Su","Mo","Tu","We","Th","Fr","Sa"]
         self.headerViewDateFont = UIFont.systemFont(ofSize: 14)
         self.headerViewWeekFont = UIFont.systemFont(ofSize: 14)
         self.headerViewWeekColor = UIColor.UIColorFromRGB(rgb: 0x4F505F)
