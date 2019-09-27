@@ -37,9 +37,19 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 //        tableView.tableHeaderView = view
     }
     
+//    func editProfile() {
+//        let editVC = UIViewController()
+//        self.navigationController?.pushViewController(editVC, animated: true)
+//    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let view = Bundle.main.loadNibNamed("ProfileHeaderView", owner: self, options: nil)?.first as? ProfileHeaderView else {
             return UIView()
+        }
+        
+        view.editBlock = {
+            let editVC = EditProfileViewController()
+            self.navigationController?.pushViewController(editVC, animated: true)
         }
         return view
     }

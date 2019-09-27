@@ -7,11 +7,23 @@
 //
 
 import UIKit
+protocol PofileHeaderDelegate {
+    func editProfile(user: AppUser) -> AppUser
+}
 
 class ProfileHeaderView: UIView {
+    var delegate: PofileHeaderDelegate?
+    var editBlock: (()->Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-
+    @IBAction func editProfile(_ sender: Any) {
+        guard let block = editBlock else {
+            return
+        }
+        block()
+    }
+    
 }

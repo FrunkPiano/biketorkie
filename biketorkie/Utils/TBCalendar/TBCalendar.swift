@@ -356,7 +356,9 @@ class TBCalendar: UIView, UICollectionViewDelegate, UICollectionViewDataSource{
                 cell.reloadCellData(title: "\(day)")
             }
         }
-        
+        if indexPath.row == 7 {
+            cell.updateCellDotView(status: "1")
+        }
         cell.updateCellSelectBackgroundColor()
         return cell
     }

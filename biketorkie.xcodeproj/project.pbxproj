@@ -69,6 +69,7 @@
 		FFE1A96023337C4200258B33 /* NewsFeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A95F23337C4200258B33 /* NewsFeedsViewController.swift */; };
 		FFE1A96323338A9000258B33 /* HighlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1A96123338A9000258B33 /* HighlightCollectionViewCell.swift */; };
 		FFE1A96423338A9000258B33 /* HighlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE1A96223338A9000258B33 /* HighlightCollectionViewCell.xib */; };
+		FFE1C5DA233DE64D003CAC79 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE1C5D9233DE64D003CAC79 /* EditProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		FFE1A95F23337C4200258B33 /* NewsFeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedsViewController.swift; sourceTree = "<group>"; };
 		FFE1A96123338A9000258B33 /* HighlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFE1A96223338A9000258B33 /* HighlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HighlightCollectionViewCell.xib; sourceTree = "<group>"; };
+		FFE1C5D9233DE64D003CAC79 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 				FFD9DF5123260A4700B3A5DA /* ProfileHeaderView.swift */,
 				FFD9DF5323260A6000B3A5DA /* ProfileHeaderView.xib */,
 				FFD9DF552326245200B3A5DA /* Dynamic.swift */,
+				FFE1C5D9233DE64D003CAC79 /* EditProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -655,6 +658,7 @@
 				FFE1A93423323BFF00258B33 /* YCTitleView.swift in Sources */,
 				FFE1A95D233370FB00258B33 /* UIScreen+Extension.swift in Sources */,
 				FFE1A93523323BFF00258B33 /* YCPageView.swift in Sources */,
+				FFE1C5DA233DE64D003CAC79 /* EditProfileViewController.swift in Sources */,
 				FFE1A95823336A7400258B33 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

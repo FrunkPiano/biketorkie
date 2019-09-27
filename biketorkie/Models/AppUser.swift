@@ -9,6 +9,7 @@
 import UIKit
 
 class AppUser {
+    let shared = AppUser()
 //    var firstName:String?
 //    var lastName:String?
 //    var email:String?
@@ -27,4 +28,5 @@ class AppUser {
     var sex = 1
     var age = 0
     var token = ""
+    var avatar = ""
 }

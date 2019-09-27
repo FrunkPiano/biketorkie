@@ -824,28 +824,6 @@
             <point key="canvasLocation" x="1652" y="-611"/>
         </scene>
         <!--Profile-->
-        <scene sceneID="VCc-ih-4at">
-            <objects>
-                <viewController id="O8c-uK-7I5" customClass="ProfileViewController" customModule="biketorkie" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bFe-ix-nf7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ZCq-vB-cgv"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Profile" id="1Zt-dz-tna">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="kWZ-CE-ZJB">
-                            <connections>
-                                <action selector="Settings:" destination="O8c-uK-7I5" id="HQt-Bl-yhV"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zbV-5p-eRg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3401.449275362319" y="832.36607142857144"/>
-        </scene>
-        <!--Profile-->
         <scene sceneID="HGc-Vd-geU">
             <objects>
                 <navigationController id="92O-4P-mub" sceneMemberID="viewController">
