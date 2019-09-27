@@ -153,8 +153,13 @@ class RideViewController: UIViewController, MKMapViewDelegate {
 
 extension RideViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let searchResultVC = UIViewController()
-        self.navigationController?.pushViewController(searchResultVC, animated: true)
+//        let searchResultVC = UIViewController()
+//        self.navigationController?.pushViewController(searchResultVC, animated: true)
+        
+         //初始化一个点注释对象
+        let result1 = Artwork(title: "Jack", locationName: "", discipline: "discipline", coordinate: CLLocationCoordinate2D(latitude: 33.5, longitude: 150.53))
+        mapView.addAnnotation(result1)
+        
     }
 }
 

@@ -9,6 +9,8 @@
 import UIKit
 import SnapKit
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
 
     var tableView: UITableView!
     var dynamics = [Dynamic(), Dynamic(), Dynamic()]
@@ -41,6 +43,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 //        let editVC = UIViewController()
 //        self.navigationController?.pushViewController(editVC, animated: true)
 //    }
+    @IBAction func openSettings(_ sender: Any) {
+        let settingsVC = SettingsViewController()
+        self.navigationController?.pushViewController(settingsVC, animated: true)
+    }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let view = Bundle.main.loadNibNamed("ProfileHeaderView", owner: self, options: nil)?.first as? ProfileHeaderView else {
@@ -64,7 +70,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dynamics.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,7 +83,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 250
     }
     
     

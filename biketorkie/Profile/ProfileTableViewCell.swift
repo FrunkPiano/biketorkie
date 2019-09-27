@@ -10,15 +10,24 @@ import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var activityLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        mapView.showsUserLocation = true
+        mapView.mapType = .standard
+        
         // Initialization code
     }
 
     var dynamic: Dynamic? {
         didSet {
             activityLabel.text = dynamic?.activity
+            
+            
+            let zoomLevel = 0.02
+            let region = MKCoordinateRegion(center: dynamic!.place, span: MKCoordinateSpan(latitudeDelta: zoomLevel, longitudeDelta: zoomLevel))
+            mapView.setRegion(region, animated: true)
         }
     }
     override func setSelected(_ selected: Bool, animated: Bool) {

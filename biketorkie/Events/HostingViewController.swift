@@ -19,7 +19,8 @@ class HostingViewController: UIViewController {
     }
 
     @IBAction func invitePeople(_ sender: Any) {
-        
+        let inviteVC = InvitePeopleViewController()
+        self.navigationController?.pushViewController(inviteVC, animated: true)
     }
     
     @IBAction func createAct(_ sender: Any) {

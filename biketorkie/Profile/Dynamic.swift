@@ -13,4 +13,5 @@ class Dynamic: NSObject {
     var position: String?
     var partner: String?
     var activity = "Ride With"
+    var place = CLLocationCoordinate2D(latitude: 39.9, longitude: 116.3)
 }

@@ -34,6 +34,7 @@ class NewsFeedsViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ProfileTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileTableViewCell")
+        tableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
     }
     
     
@@ -142,19 +143,33 @@ extension NewsFeedsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dynamics.count
+        return dynamics.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard  let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell else {
-            return UITableViewCell()
+        if indexPath.row == 0 {
+            guard  let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ProductTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.buyClosure = {
+                let buyVC = UIViewController()
+                self.navigationController?.pushViewController(buyVC, animated: true)
+            }
+            return cell
+        } else {
+            guard  let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableViewCell", for: indexPath) as? ProfileTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.dynamic = dynamics[indexPath.row - 1]
+            return cell
         }
-        cell.dynamic = dynamics[indexPath.row]
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        if indexPath.row == 0 {
+            return 100
+        }else {
+            return 250
+        }
     }
 }

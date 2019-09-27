@@ -103,6 +103,8 @@ class YCTitleView: UIView {
         //设置UI
         setupUI()
     }
+    
+    
 }
 
 // MARK: - 设置UI
@@ -260,6 +262,62 @@ extension YCTitleView {
         if currentLabel.tag == currentIndex { return }
         
         //print("currentLabel.tag:\(currentLabel.tag)---currentIndex:\(currentIndex)")
+        
+        // 获取之前的Label
+        let oldLabel = titleLabels[currentIndex]
+        
+        // 切换文字的颜色
+        currentLabel.textColor = style.selectedColor
+        oldLabel.textColor = style.normalColor
+        
+        // 保存最新Label的下标值
+        currentIndex = currentLabel.tag
+        
+        for label in titleLabels{
+            if(label !== currentLabel){
+                // 3.2.变化targetLabel
+                label.textColor = style.normalColor
+                label.transform = CGAffineTransform.identity
+            }
+        }
+        
+        // 通知代理
+        delegate?.titleView(self, selectedIndex: currentIndex)
+        
+        // 居中显示
+        contentViewDidEndScroll()
+        
+        // 调整bottomLine
+        if style.isShowBottomLine {
+            UIView.animate(withDuration: 0.15, animations: {
+                self.bottomLine.frame.origin.x = currentLabel.frame.origin.x
+                self.bottomLine.frame.size.width = currentLabel.frame.size.width
+            })
+        }
+        
+        // 调整缩放比例
+        if style.isNeedScale {
+            oldLabel.transform = CGAffineTransform.identity
+            currentLabel.transform = CGAffineTransform(scaleX: style.scaleRange, y: style.scaleRange)
+        }
+        
+        // 遮盖视图移动
+        if style.isShowCover {
+            let coverX = style.isScrollEnable ? (currentLabel.frame.origin.x - style.coverMargin) : currentLabel.frame.origin.x
+            let coverW = style.isScrollEnable ? (currentLabel.frame.width + style.coverMargin * 2) : currentLabel.frame.width
+            UIView.animate(withDuration: 0.15, animations: {
+                self.coverView.frame.origin.x = coverX
+                self.coverView.frame.size.width = coverW
+            })
+        }
+    }
+    
+    func selectTtileIndex(index: Int) {
+        // 获取当前Label
+        let currentLabel = titleLabels[index]
+        
+        // 如果是重复点击同一个Title,那么直接返回
+        if currentIndex == index { return }
         
         // 获取之前的Label
         let oldLabel = titleLabels[currentIndex]

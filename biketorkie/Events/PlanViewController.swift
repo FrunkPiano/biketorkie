@@ -9,6 +9,7 @@
 import UIKit
 
 class PlanViewController: UIViewController, TBCalendarDataDelegate , TBCalendarDataSource {
+    var clickClosure: ((_ date: NSDate)->Void)?
     lazy var calender: TBCalendar = self.getCalendar()
     lazy var style: TBCalendarAppearStyle = self.getStyle()
     override func viewDidLoad() {
@@ -100,6 +101,9 @@ class PlanViewController: UIViewController, TBCalendarDataDelegate , TBCalendarD
     
     func calender(calender: TBCalendar, didSelectDate: NSDate) {
         //这个地方可以做相应的点击某一天的数据处理
+        if let block = clickClosure {
+            block(didSelectDate)
+        }
         print(didSelectDate)
     }
 

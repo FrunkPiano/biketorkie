@@ -28,15 +28,6 @@ class DiscoveryViewController: UIViewController {
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -84,6 +75,7 @@ class HeaderView: UIView {
     var label = UILabel()
     convenience init(name: String) {
         self.init(frame: CGRect.zero)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.text = name
         
     }
@@ -93,7 +85,7 @@ class HeaderView: UIView {
         
         self.addSubview(label)
         label.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.edges.equalToSuperview().offset(10)
         }
     }
     
