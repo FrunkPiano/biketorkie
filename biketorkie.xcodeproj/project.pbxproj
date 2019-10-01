@@ -23,6 +23,12 @@
 		18AA162B230AD4860098CFF9 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AA162A230AD4860098CFF9 /* UserViewController.swift */; };
 		18DCD0A323101EF600734C6D /* RideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DCD0A223101EF600734C6D /* RideTableViewController.swift */; };
 		3997EB86BFFED32D2D36FABC /* Pods_biketorkie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E48DCB97990F5C709A5F838 /* Pods_biketorkie.framework */; };
+		500CE3CB2342F2350034DB82 /* TababrViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500CE3CA2342F2350034DB82 /* TababrViewController.swift */; };
+		500CE3CD2342F4100034DB82 /* WWWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500CE3CC2342F4100034DB82 /* WWWebViewController.swift */; };
+		500CE3D0234313F90034DB82 /* EditTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500CE3CE234313F90034DB82 /* EditTextViewController.swift */; };
+		500CE3D1234313F90034DB82 /* EditTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 500CE3CF234313F90034DB82 /* EditTextViewController.xib */; };
+		5090FDBC23431A6A00FFD13D /* SoundControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090FDBA23431A6A00FFD13D /* SoundControlViewController.swift */; };
+		5090FDBD23431A6A00FFD13D /* SoundControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5090FDBB23431A6A00FFD13D /* SoundControlViewController.xib */; };
 		FF35B397233B5A7A009A2BFC /* CSToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35B396233B5A7A009A2BFC /* CSToast.swift */; };
 		FFD62B87233E0B78000463B7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD62B86233E0B78000463B7 /* SettingsViewController.swift */; };
 		FFD667962325E70C00345A02 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD667952325E70C00345A02 /* ProfileViewController.swift */; };
@@ -121,6 +127,12 @@
 		18AA162A230AD4860098CFF9 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		18DCD0A223101EF600734C6D /* RideTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTableViewController.swift; sourceTree = "<group>"; };
 		28724221330FEE9D71E65147 /* Pods-biketorkie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biketorkie.release.xcconfig"; path = "Target Support Files/Pods-biketorkie/Pods-biketorkie.release.xcconfig"; sourceTree = "<group>"; };
+		500CE3CA2342F2350034DB82 /* TababrViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TababrViewController.swift; sourceTree = "<group>"; };
+		500CE3CC2342F4100034DB82 /* WWWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWWebViewController.swift; sourceTree = "<group>"; };
+		500CE3CE234313F90034DB82 /* EditTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextViewController.swift; sourceTree = "<group>"; };
+		500CE3CF234313F90034DB82 /* EditTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTextViewController.xib; sourceTree = "<group>"; };
+		5090FDBA23431A6A00FFD13D /* SoundControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundControlViewController.swift; sourceTree = "<group>"; };
+		5090FDBB23431A6A00FFD13D /* SoundControlViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundControlViewController.xib; sourceTree = "<group>"; };
 		7E48DCB97990F5C709A5F838 /* Pods_biketorkie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_biketorkie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F9518FE382DFB718EC8A062 /* Pods-biketorkie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-biketorkie.debug.xcconfig"; path = "Target Support Files/Pods-biketorkie/Pods-biketorkie.debug.xcconfig"; sourceTree = "<group>"; };
 		FF35B396233B5A7A009A2BFC /* CSToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSToast.swift; sourceTree = "<group>"; };
@@ -216,6 +228,7 @@
 				1890AC4C230C228D0033BC2B /* RegisterViewController2.swift */,
 				1890AC4E230C2CBA0033BC2B /* RegisterViewController3.swift */,
 				1890AC50230C2D6F0033BC2B /* RegisterViewController4.swift */,
+				500CE3CA2342F2350034DB82 /* TababrViewController.swift */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -333,6 +346,10 @@
 				FFD9DF552326245200B3A5DA /* Dynamic.swift */,
 				FFE1C5D9233DE64D003CAC79 /* EditProfileViewController.swift */,
 				FFD62B86233E0B78000463B7 /* SettingsViewController.swift */,
+				500CE3CE234313F90034DB82 /* EditTextViewController.swift */,
+				500CE3CF234313F90034DB82 /* EditTextViewController.xib */,
+				5090FDBA23431A6A00FFD13D /* SoundControlViewController.swift */,
+				5090FDBB23431A6A00FFD13D /* SoundControlViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -451,6 +468,7 @@
 				FFE1A96223338A9000258B33 /* HighlightCollectionViewCell.xib */,
 				FFE1C5E7233E072B003CAC79 /* ProductTableViewCell.swift */,
 				FFE1C5E8233E072B003CAC79 /* ProductTableViewCell.xib */,
+				500CE3CC2342F4100034DB82 /* WWWebViewController.swift */,
 			);
 			path = NewsFeeds;
 			sourceTree = "<group>";
@@ -565,7 +583,9 @@
 				FFE1A94823332EA300258B33 /* JoinActivityTableViewCell.xib in Resources */,
 				FFE1C5EA233E072B003CAC79 /* ProductTableViewCell.xib in Resources */,
 				FFE1C5E2233DF07C003CAC79 /* WeatherCell.xib in Resources */,
+				5090FDBD23431A6A00FFD13D /* SoundControlViewController.xib in Resources */,
 				FFD9DF4E2325FF4500B3A5DA /* ProfileTableViewCell.xib in Resources */,
+				500CE3D1234313F90034DB82 /* EditTextViewController.xib in Resources */,
 				18AA1604230ACD5D0098CFF9 /* Assets.xcassets in Resources */,
 				FFE1A93C233321A400258B33 /* DsicoveryViewController.xib in Resources */,
 				FFE1A96423338A9000258B33 /* HighlightCollectionViewCell.xib in Resources */,
@@ -676,6 +696,7 @@
 				FFE1C5E5233DF08E003CAC79 /* FriendRequestCell.swift in Sources */,
 				1890AC51230C2D6F0033BC2B /* RegisterViewController4.swift in Sources */,
 				FFE1A95B233370B800258B33 /* IphoneConstant.swift in Sources */,
+				5090FDBC23431A6A00FFD13D /* SoundControlViewController.swift in Sources */,
 				FFD9DF4D2325FF4500B3A5DA /* ProfileTableViewCell.swift in Sources */,
 				FFE1C5DE233DEBA1003CAC79 /* NotifyViewController.swift in Sources */,
 				FFE1A96323338A9000258B33 /* HighlightCollectionViewCell.swift in Sources */,
@@ -686,6 +707,7 @@
 				FFE1A90E232F86D100258B33 /* HttpRequest.swift in Sources */,
 				18DCD0A323101EF600734C6D /* RideTableViewController.swift in Sources */,
 				FFE1A94323332C2900258B33 /* PlanViewController.swift in Sources */,
+				500CE3D0234313F90034DB82 /* EditTextViewController.swift in Sources */,
 				FFE1A9532333674900258B33 /* TBCalendarAppearStyle.swift in Sources */,
 				FFE1A9512333674900258B33 /* TBCalendar.swift in Sources */,
 				FFE1A93B233321A400258B33 /* DiscoveryViewController.swift in Sources */,
@@ -694,8 +716,10 @@
 				FFE1A93423323BFF00258B33 /* YCTitleView.swift in Sources */,
 				FFE1A95D233370FB00258B33 /* UIScreen+Extension.swift in Sources */,
 				FFE1A93523323BFF00258B33 /* YCPageView.swift in Sources */,
+				500CE3CB2342F2350034DB82 /* TababrViewController.swift in Sources */,
 				FFE1C5DA233DE64D003CAC79 /* EditProfileViewController.swift in Sources */,
 				FFE1A95823336A7400258B33 /* Const.swift in Sources */,
+				500CE3CD2342F4100034DB82 /* WWWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

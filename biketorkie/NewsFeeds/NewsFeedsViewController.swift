@@ -152,7 +152,7 @@ extension NewsFeedsViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.buyClosure = {
-                let buyVC = UIViewController()
+                let buyVC = WWWebViewController(url: "https://www.paypal.com/c2/webapps/mpp/home")
                 self.navigationController?.pushViewController(buyVC, animated: true)
             }
             return cell

@@ -69,4 +69,23 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                let resetVC = WWWebViewController(url: "www.facebook.com")
+                self.navigationController?.pushViewController(resetVC, animated: true)
+            }else if indexPath.row == 3 {
+                let soundVC = SoundControlViewController()
+                self.navigationController?.pushViewController(soundVC, animated: true)
+            }
+        }else {
+            //通知名称常量
+            let NotifyChatMsgRecv = NSNotification.Name(rawValue:"logout")
+            //发送通知
+            NotificationCenter.default.post(name:NotifyChatMsgRecv, object: nil, userInfo: nil)
+            
+        }
+        
+    }
 }
