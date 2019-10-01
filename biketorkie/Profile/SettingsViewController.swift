@@ -73,11 +73,18 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                let resetVC = WWWebViewController(url: "www.facebook.com")
+//                let resetVC = WWWebViewController(url: "www.facebook.com")
+                let resetVC = ForgetPasswordViewController()
                 self.navigationController?.pushViewController(resetVC, animated: true)
-            }else if indexPath.row == 3 {
+            } else if indexPath.row == 2 {
+                let blockedVC = BlockedAccountViewController()
+                self.navigationController?.pushViewController(blockedVC, animated: true)
+            } else if indexPath.row == 3 {
                 let soundVC = SoundControlViewController()
                 self.navigationController?.pushViewController(soundVC, animated: true)
+            } else if indexPath.row == 6 {
+                let aboutVC = AboutViewController()
+                self.navigationController?.pushViewController(aboutVC, animated: true)
             }
         }else {
             //通知名称常量

@@ -23,25 +23,26 @@ class UserViewController: UIViewController {
 //    }
     
     @IBAction func loginClick(_ sender: Any) {
-        print("login")
-        HttpRequest.loadData(target: DMAPI.login(account: "11111", password: "123456"), success: { (data) in
-            print("登录成功")
-        }) { (code, msg) in
-            print("登录失败")
-        }
+//        HttpRequest.loadData(target: DMAPI.login(account: "11111", password: "123456"), success: { (data) in
+//            print("登录成功")
+//        }) { (code, msg) in
+//            print("登录失败")
+//        }
         
         
-        NetworkTools.POST(url: "http://10.2.129.63:8080/user/loginbypwd.do", params: ["phone": "1111", "password": "123456"], success: { (json) in
-            print("登录成功")
-        }) { (state_code, message) in
-            print(state_code)
-            print(message)
-            print("登录失败")
-        }
+//        NetworkTools.POST(url: "http://10.2.129.63:8080/user/loginbypwd.do", params: ["phone": "1111", "password": "123456"], success: { (json) in
+//            print("登录成功")
+//        }) { (state_code, message) in
+//            print(state_code)
+//            print(message)
+//            print("登录失败")
+//        }
         
     }
     @IBAction func forgetPasswd(_ sender: Any) {
-        print("forgetPasswd")
+        let forgetVC = ForgetPasswordViewController()
+        self.present(forgetVC, animated: true, completion: nil)
+//        print("forgetPasswd")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

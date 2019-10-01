@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="KGk-i7-Jjw" customClass="BlockAccountTableViewCell" customModule="biketorkie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="BlockAccountTableViewCell" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPA-Zd-mGv">
+                        <rect key="frame" x="20" y="10" width="155" height="37"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xw5-0r-MZi">
+                        <rect key="frame" x="185" y="10" width="50" height="37"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="oSA-cP-W2b"/>
+                        </constraints>
+                        <state key="normal" title="Unlock">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="unlock:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Hnh-4e-pld"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yah-Wo-SQ5">
+                        <rect key="frame" x="245" y="10" width="50" height="37"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="p4e-fS-B40"/>
+                        </constraints>
+                        <state key="normal" title="Report">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="report:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eQP-Q3-zrB"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="xw5-0r-MZi" secondAttribute="bottom" constant="10" id="5Ds-FN-BvT"/>
+                    <constraint firstItem="yah-Wo-SQ5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="62X-oJ-Byf"/>
+                    <constraint firstItem="bPA-Zd-mGv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="AIh-s4-vfi"/>
+                    <constraint firstItem="xw5-0r-MZi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="FaQ-1z-cN8"/>
+                    <constraint firstAttribute="bottom" secondItem="yah-Wo-SQ5" secondAttribute="bottom" constant="10" id="Zcf-nk-BWc"/>
+                    <constraint firstItem="yah-Wo-SQ5" firstAttribute="leading" secondItem="xw5-0r-MZi" secondAttribute="trailing" constant="10" id="hKL-T1-SXH"/>
+                    <constraint firstAttribute="trailing" secondItem="yah-Wo-SQ5" secondAttribute="trailing" constant="20" id="olm-GF-JUz"/>
+                    <constraint firstAttribute="bottom" secondItem="bPA-Zd-mGv" secondAttribute="bottom" constant="10" id="quF-fc-9jX"/>
+                    <constraint firstItem="xw5-0r-MZi" firstAttribute="leading" secondItem="bPA-Zd-mGv" secondAttribute="trailing" constant="10" id="vWU-Xn-mb4"/>
+                    <constraint firstItem="bPA-Zd-mGv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="zJv-Wg-qdZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="bPA-Zd-mGv" id="mfj-mk-VPx"/>
+            </connections>
+            <point key="canvasLocation" x="126.81159420289856" y="154.35267857142856"/>
+        </tableViewCell>
+    </objects>
+</document>
