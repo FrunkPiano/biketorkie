@@ -9,16 +9,17 @@
 import UIKit
 
 class AppUser {
-    let shared = AppUser()
-//    var firstName:String?
-//    var lastName:String?
-//    var email:String?
-//    var gender:String?
-//    var birthday:String?
-//    var address:String?
-//    var experience:String?
-//    var biography:String?
-//    var photo:String?
+    static let sharedInstance = AppUser()
+
+    var firstName:String?
+    var lastName:String?
+    var email:String?
+    var gender:String?
+    var birthday:String?
+    var address:String?
+    var experience:String?
+    var biography:String?
+    var photo:String?
     var password = ""
     
     var id = 0

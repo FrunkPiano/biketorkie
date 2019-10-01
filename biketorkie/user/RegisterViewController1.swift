@@ -21,16 +21,16 @@ class RegisterViewController1: UIViewController {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        appUser.firstName = firstNameField.text
-//        appUser.lastName = lastNameField.text
-//        appUser.email = emailField.text
+        appUser.firstName = firstNameField.text
+        appUser.lastName = lastNameField.text
+        appUser.email = emailField.text
         appUser.password = passwordField.text ?? ""
         
-        HttpRequest.loadData(target: DMAPI.register(user: appUser), success: { (data) in
-            print("注册成功")
-        }) { (code, msg) in
-            print("注册失败")
-        }
+//        HttpRequest.loadData(target: DMAPI.register(user: appUser), success: { (data) in
+//            print("注册成功")
+//        }) { (code, msg) in
+//            print("注册失败")
+//        }
 //        let vc = segue.destination as! RegisterViewController2
 //        self.shared.firstName=firstNameField.text
 //        self.shared.lastName=lastNameField.text
