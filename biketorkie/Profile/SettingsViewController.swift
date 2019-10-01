@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     var tableView: UITableView!
-    var items = ["Rest Password", "Invite Friends", "Blocked Accounts", "Sound", "Notifications", "Help", "About", "Language"]
+    var items = ["Rest Password", "Blocked Accounts", "Sound", "About"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -76,13 +76,13 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
 //                let resetVC = WWWebViewController(url: "www.facebook.com")
                 let resetVC = ForgetPasswordViewController()
                 self.navigationController?.pushViewController(resetVC, animated: true)
-            } else if indexPath.row == 2 {
+            } else if indexPath.row == 1 {
                 let blockedVC = BlockedAccountViewController()
                 self.navigationController?.pushViewController(blockedVC, animated: true)
-            } else if indexPath.row == 3 {
+            } else if indexPath.row == 2 {
                 let soundVC = SoundControlViewController()
                 self.navigationController?.pushViewController(soundVC, animated: true)
-            } else if indexPath.row == 6 {
+            } else if indexPath.row == 3 {
                 let aboutVC = AboutViewController()
                 self.navigationController?.pushViewController(aboutVC, animated: true)
             }
